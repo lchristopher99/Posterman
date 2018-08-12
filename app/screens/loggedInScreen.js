@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { SecureStore } from 'expo';
+
+// custom components
+import Button from '../components/button';
 
 
 export default class LoggedOutScreen extends Component {
@@ -9,6 +13,14 @@ export default class LoggedOutScreen extends Component {
         <Text>
           Logged In!
         </Text>
+        <Button
+          title='LogOut'
+          backgroundColor='purple'
+          onPress={() => {
+            SecureStore.deleteItemAsync('UID');
+            this.props.navigation.navigate('LoggedOut', { splash: false });
+          }}
+        />
       </View>
     );
   }

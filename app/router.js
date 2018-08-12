@@ -3,6 +3,7 @@ import { createSwitchNavigator } from 'react-navigation';
 // screens 
 import loggedOutScreen from './screens/loggedOutScreen';
 import loggedInScreen from './screens/loggedInScreen';
+import newAccountScreen from './screens/newAccountScreen';
 
 export const rootNav = createSwitchNavigator({
   LoggedOut: {
@@ -10,6 +11,9 @@ export const rootNav = createSwitchNavigator({
   },
   LoggedIn: {
     screen: loggedInScreen
+  },
+  NewAccount: {
+    screen: newAccountScreen
   }
 },
   {

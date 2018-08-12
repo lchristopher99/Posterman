@@ -1,6 +1,6 @@
 import { SecureStore } from 'expo';
 
-export const postData = (user, pass, route) => {
+export const postData = (user, pass, first, last, route) => {
   return new Promise((resolve, reject) => {
     let url = 'https://postman-bbc87.firebaseio.com' + route;
     fetch(url, {
@@ -11,7 +11,9 @@ export const postData = (user, pass, route) => {
       },
       body: JSON.stringify({
         user,
-        pass
+        pass,
+        first,
+        last
       }),
     })
       .then(res => resolve(res))
