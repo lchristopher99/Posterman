@@ -7,7 +7,7 @@ import FormInput from '../components/formInput';
 import FormButton from '../components/button'
 
 // middleware
-import { postData, getData, loginUser } from '../activities/dataWare';
+import { postData } from '../activities/dataWare';
 
 export default class NewAccountScreen extends Component {
   state = {
