@@ -70,10 +70,7 @@ export const loginUser = (user, pass, route) => {
               SecureStore.setItemAsync('UID', JSON.stringify(UID));
               resolve(true);
               break;
-            } else {
-              resolve(false);
-              break;
-            }
+            } 
           }
         });
       })

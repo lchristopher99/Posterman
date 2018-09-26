@@ -34,7 +34,7 @@ export default class LoggedOutScreen extends Component {
         SecureStore.getItemAsync('UID')
           .then(UID => {
             if (UID) {
-              console.log(UID);
+              //console.log(UID);
               nav('LoggedIn');
             } else {
               this.setState({ splash: false });
